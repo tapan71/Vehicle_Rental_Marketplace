@@ -2,10 +2,6 @@ const mongoose = require("mongoose");
 
 const ownerSchema = new mongoose.Schema(
   {
-    ownerid: {
-      type: String,
-      unique: true
-    },
 
     name: {
       type: String,

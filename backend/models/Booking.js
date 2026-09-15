@@ -2,29 +2,25 @@ const mongoose = require("mongoose");
 
 const bookingSchema = new mongoose.Schema(
   {
-    bookingid: {
-      type: String,
-      unique: true
-    },
 
-    vehicleid: {
+    vehicleId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Vehicle",
       required: true
     },
 
-    userid: {
+    userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
       required: true
     },
 
-    startdatetime: {
+    startDateTime: {
       type: Date,
       required: true
     },
 
-    enddatetime: {
+    endDateTime: {
       type: Date,
       required: true
     },
@@ -35,7 +31,7 @@ const bookingSchema = new mongoose.Schema(
       default: "pending"
     },
 
-    totalamount: {
+    totalAmount: {
       type: Number,
       required: true
     }

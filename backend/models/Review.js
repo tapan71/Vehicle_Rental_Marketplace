@@ -2,12 +2,8 @@ const mongoose = require("mongoose");
 
 const reviewSchema = new mongoose.Schema(
   {
-    reviewid: {
-      type: String,
-      unique: true
-    },
 
-    bookingid: {
+    bookingId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Booking",
       required: true

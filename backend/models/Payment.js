@@ -2,12 +2,8 @@ const mongoose = require("mongoose");
 
 const paymentSchema = new mongoose.Schema(
   {
-    paymentid: {
-      type: String,
-      unique: true
-    },
 
-    bookingid: {
+    bookingId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Booking",
       required: true
@@ -18,13 +14,13 @@ const paymentSchema = new mongoose.Schema(
       required: true
     },
 
-    paymentstatus: {
+    paymentStatus: {
       type: String,
       required: true,
       default: "pending"
     },
 
-    paymentdate: {
+    paymentDate: {
       type: Date,
       default: Date.now
     }

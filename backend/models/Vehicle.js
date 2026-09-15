@@ -2,11 +2,6 @@ const mongoose = require("mongoose");
 
 const vehicleSchema = new mongoose.Schema(
   {
-    vehicleid: {
-      type: String,
-      unique: true
-    },
-
     brand: {
       type: String,
       required: true
@@ -38,7 +33,7 @@ const vehicleSchema = new mongoose.Schema(
       required: true
     },
 
-    ownerid: {
+    ownerId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Owner",
       required: true
