@@ -11,7 +11,8 @@ const {
 } = require("../controllers/bookingController");
 
 // CREATE BOOKING
-router.post("/", createBooking);
+const { protect } = require("../middleware/authMiddleware");
+router.post("/", protect, createBooking);
 
 // GET ALL BOOKINGS
 router.get("/", getAllBookings);

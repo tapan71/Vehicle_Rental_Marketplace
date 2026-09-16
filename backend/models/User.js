@@ -18,8 +18,30 @@ const userSchema = new mongoose.Schema(
       required: true
     },
 
+    password: {
+      type: String,
+      required: true
+    },
+
+    city: {
+      type: String,
+      required: true
+    },
+
+    role: {
+      type: String,
+      enum: ["customer", "owner", "admin"],
+      default: "customer"
+    },
+
     licenseid: {
       type: String
+    },
+
+    licenseStatus: {
+      type: String,
+      enum: ["not_uploaded", "pending", "verified", "rejected"],
+      default: "not_uploaded"
     }
   },
   {
